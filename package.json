@@ -1,0 +1,23 @@
+{
+  "name": "tcc-ebac-qe",
+  "version": "1.0.0",
+  "description": "UI and API automation project",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Himroth/TCC-EBAC-QE.git"
+  },
+  "author": "Helton Imroth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Himroth/TCC-EBAC-QE/issues"
+  },
+  "homepage": "https://github.com/Himroth/TCC-EBAC-QE#readme",
+  "dependencies": {
+    "cypress": "^11.2.0",
+    "node": "^19.1.0"
+  }
+}
