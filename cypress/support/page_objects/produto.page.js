@@ -1,15 +1,9 @@
 class produto {
     get botaoComprar() {return cy.get('.single_add_to_cart_button')}
 
-    get botaoTamanho() {return ('.button-variable-item-'+tamanho)}
+    get botaoTamanho() {return cy.get('[class^="variable-item button-variable-item button-variable-item-"]')}
 
-    get botaCor() {return cy.get('.button-variable-item-')}
-
-
-    selectTamanho(tamanho) {
-        this.botaoTamanho+tamanho
-
-    }
+    get botaCor() {return cy.get('[class^="variable-item button-variable-item button-variable-item-Blue"]')}
 
 }
 

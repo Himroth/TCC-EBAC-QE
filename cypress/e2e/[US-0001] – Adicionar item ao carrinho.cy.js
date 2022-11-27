@@ -17,8 +17,8 @@ describe('Adicionar produto ao carrinho', () => {
     })
 
     it.only('Valida se é possível adicionar produto no carrinho selecionando cor e tamanho', () => {
-      cy.get(produtoPage.selectTamanho(tamanho.XS)).click()
-      cy.get(produtoPage.botaCor+cor.blue).click()
+      produtoPage.botaoTamanho.contains(tamanho.XS).click({force: true})
+      produtoPage.botaCor.contains(cor.blue).click({force: true})
       produtoPage.botaoComprar.click()
       cy.get('.woocommerce-message > .button').click()
       cy.get('.product-name > a').should('contain', nomeProduto.nomeProduto)
