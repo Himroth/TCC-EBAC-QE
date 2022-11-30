@@ -3,7 +3,11 @@ class produto {
 
     get botaoTamanho() {return cy.get('[class^="variable-item button-variable-item button-variable-item-"]')}
 
-    get botaCor() {return cy.get('[class^="variable-item button-variable-item button-variable-item-Blue"]')}
+    get botaoCor() {return cy.get('[class^="variable-item button-variable-item button-variable-item-Blue"]')}
+
+    get botaoVerCarrinho() {return cy.get('.woocommerce-message > .button')}
+
+    get dadosDoProdutoNoCarrinho() {return  cy.get('.product-name > a')}
 
 }
 

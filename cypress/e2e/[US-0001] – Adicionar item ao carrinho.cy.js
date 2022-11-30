@@ -16,14 +16,14 @@ describe('Adicionar produto ao carrinho', () => {
   
     })
 
-    it.only('Valida se é possível adicionar produto no carrinho selecionando cor e tamanho', () => {
+    it('Valida se é possível adicionar produto no carrinho selecionando cor e tamanho', () => {
       produtoPage.botaoTamanho.contains(tamanho.XS).click({force: true})
-      produtoPage.botaCor.contains(cor.blue).click({force: true})
+      produtoPage.botaoCor.contains(cor.blue).click({force: true})
       produtoPage.botaoComprar.click()
-      cy.get('.woocommerce-message > .button').click()
-      cy.get('.product-name > a').should('contain', nomeProduto.nomeProduto)
-      cy.get('.product-name > a').should('contain', tamanho.XS)
-      cy.get('.product-name > a').should('contain', cor.blue)
+      produtoPage.botaoVerCarrinho.click()
+      produtoPage.dadosDoProdutoNoCarrinho.should('contain', nomeProduto.nomeProduto)
+      produtoPage.dadosDoProdutoNoCarrinho.should('contain', tamanho.XS)
+      produtoPage.dadosDoProdutoNoCarrinho.should('contain', cor.blue)
 
     });
   });
