@@ -1,5 +1,6 @@
 import tamanho from "./tamanho.json"
 import cor from "./cor.json"
 import nomeProduto from "./nomeProduto.json"
+import apiAcess from "./apiAcess.json"
 
-export {tamanho, cor, nomeProduto}
+export {tamanho, cor, nomeProduto, apiAcess}
