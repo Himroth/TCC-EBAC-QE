@@ -1,7 +1,5 @@
 import { loginPage } from "../support/page_objects";
 
-loginPage
-
 describe('Login na plataforma', () => {
     beforeEach(() => {
         cy.visit('http://lojaebac.ebaconline.art.br/')

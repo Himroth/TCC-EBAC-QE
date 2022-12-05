@@ -9,6 +9,8 @@ class produto {
 
     get dadosDoProdutoNoCarrinho() {return  cy.get('.product-name > a')}
 
+    get nomeDoProduto() {return cy.get('[class="name"]')}
+
 }
 
 export default new produto()

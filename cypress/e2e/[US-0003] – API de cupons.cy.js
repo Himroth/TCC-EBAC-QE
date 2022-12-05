@@ -7,7 +7,7 @@ describe('API de cupons', () => {
             cy.request({
                 method: 'GET',
                 url: 'http://lojaebac.ebaconline.art.br/wp-json/wc/v3/coupons',
-                headers: {authorization: 'Basic YWRtaW5fZWJhYzpAYWRtaW4hJmJAYyEyMDIy'}
+                headers: {authorization: apiAcess.authorization}
             }).then(response=> {
                 expect(response.status).to.equal(200)
             })
@@ -17,7 +17,7 @@ describe('API de cupons', () => {
             cy.request({
                 method: 'POST',
                 url: 'http://lojaebac.ebaconline.art.br/wp-json/wc/v3/coupons',
-                headers: {authorization: 'Basic YWRtaW5fZWJhYzpAYWRtaW4hJmJAYyEyMDIy'},
+                headers: {authorization: apiAcess.authorization},
                 body: {
                     "code": "nomeCupom",
                     "amount": "10",
