@@ -12,6 +12,8 @@ class login {
 
     get mensagemPosLogin() {return cy.get('.woocommerce-MyAccount-content > :nth-child(2)')}
 
+    get tituloTelaLogin() {return cy.get(':nth-child(1) > h2')}
+
 
 }
 
