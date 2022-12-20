@@ -1,4 +1,4 @@
-import { loginPage, enderecosPage } from "../support/page_objects";
+import { enderecosPage } from "../support/page_objects";
 const {usuario} = require ('../fixtures')
 
 describe('Funcionalidade Endereços', () => {

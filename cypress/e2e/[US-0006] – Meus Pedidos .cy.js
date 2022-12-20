@@ -1,4 +1,4 @@
-import { loginPage, meusPedidosPage } from "../support/page_objects";
+import { meusPedidosPage } from "../support/page_objects";
 const {usuario} = require ('../fixtures')
 
 describe('Funcionalidade meus pedidos', () => {

@@ -1,4 +1,4 @@
-import { loginPage, minhaContaPage } from "../support/page_objects";
+import { minhaContaPage } from "../support/page_objects";
 const {usuario} = require ('../fixtures')
 
 describe('', () => {
