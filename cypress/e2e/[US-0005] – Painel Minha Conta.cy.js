@@ -1,11 +1,10 @@
 import { loginPage, minhaContaPage } from "../support/page_objects";
+const {usuario} = require ('../fixtures')
 
 describe('', () => {
     beforeEach(() => {
         cy.visit('/minha-conta')
-        loginPage.campoUsuario.type('teste_aluno13@teste.com')
-        loginPage.campoPassword.type('teste@teste.com')
-        loginPage.botaoLogin.click()
+        cy.loginUsingUI(usuario.usuario, usuario.senha)
     });
     context('Validando as funcionalidades do painel minha conta', () => {
         it('Validando se exibe a mensagem de boas vindas', () => {

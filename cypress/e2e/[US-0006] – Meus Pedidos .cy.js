@@ -1,11 +1,11 @@
 import { loginPage, meusPedidosPage } from "../support/page_objects";
+const {usuario} = require ('../fixtures')
 
 describe('Funcionalidade meus pedidos', () => {
     beforeEach(() => {
         cy.visit('/minha-conta/orders/')
-        loginPage.campoUsuario.type('teste_aluno13@teste.com')
-        loginPage.campoPassword.type('teste@teste.com')
-        loginPage.botaoLogin.click()
+        cy.loginUsingUI(usuario.usuario, usuario.senha)
+
     });
     context('Validar funcionalidades do menu meus pedidos', () => {
         it('Valida se são exibidas as colunas Pedido, Data, Status, Total e Ações', () => {
