@@ -25,7 +25,7 @@ describe('Funcionalidade Endereços', () => {
             enderecosPage.mensagemEnderecoSalvo.should('contain', 'Endereço alterado com sucesso.')
         });
 
-        it.only('Validar se obriga os campos obrigatórios', () => {
+        it('Validar se obriga os campos obrigatórios', () => {
             enderecosPage.botaoEditEndPagamento.click()
             enderecosPage.campoPagamentoNome.clear()
             enderecosPage.campoPagamentoSobrenome.clear()
