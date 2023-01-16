@@ -13,7 +13,7 @@ describe('API de cupons', () => {
             })
         });
 
-        it.only('Realizando POST de cupom já existente', () => {
+        it('Realizando POST de cupom já existente', () => {
             cy.request({
                 method: 'POST',
                 url: 'http://lojaebac.ebaconline.art.br/wp-json/wc/v3/coupons',
