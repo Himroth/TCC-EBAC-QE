@@ -4,7 +4,7 @@
   "description": "UI and API automation project",
   "main": "index.js",
   "scripts": {
-    "testUI": "npm cypress run",
+    "testUI": "npx cypress run --reporter junit",
     "testAPI": "jest"
   },
   "repository": {

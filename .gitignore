@@ -105,3 +105,13 @@ dist
 
 # Jest report
 jest-html-reporters-attach/
+
+# Cypress videos
+videos/
+
+# Cypress screenshots
+screenshots/
+
+#JUnit report
+test-results.xml
+
