@@ -115,3 +115,8 @@ screenshots/
 #JUnit report
 test-results.xml
 
+#Pasta results
+results/
+
+#Pasta reports
+reports/
