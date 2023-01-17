@@ -103,9 +103,6 @@ dist
 # TernJS port file
 .tern-port
 
-# Jest report
-jest-html-reporters-attach/
-
 # Cypress videos
 videos/
 
@@ -120,3 +117,10 @@ results/
 
 #Pasta reports
 reports/
+
+#Pasta downloads
+downloads
+
+# Jest report
+
+jest-html-reporters-attach/jest_html_reporters/result.js
