@@ -123,6 +123,8 @@ downloads/
 
 #Jest reports
 jest-html-reporters-attach/
+jest-html-reporters-attach\jest_html_reporters\index.js
+jest-html-reporters-attach\jest_html_reporters\result.js
 
 #Android App
 mobile/android/loja-ebac.apk
