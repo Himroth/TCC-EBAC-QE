@@ -1,6 +1,7 @@
 const homePage = require("../pageobjects/home.page")
 const loginPage = require("../pageobjects/login.page");
 const myStorePage = require("../pageobjects/myStore.page");
+const produtoPage = require("../pageobjects/produto.page")
 
 let usuario = 'gerente'
 let password = 'GD*peToHNJ1#c$sgk08EaYJQ'
@@ -18,8 +19,12 @@ describe('Acessar o painel de adminstração da loja EBAC', () => {
         await loginPage.passwordTwo(password)
         await loginPage.continueAfterTwoFactorPass()
 
-        expect(await myStorePage.myStoreLogoIsDisplayed()).toBeTruthy()
-        expect(await myStorePage.getStoreName()).toEqual('EBAC - Shop')
+        await produtoPage.tapButtonProduct()
+        expect(await produtoPage.namePageProduct()).toBeTruthy()
+        expect(await produtoPage.getProductNamePageToolbar()).toEqual('Products')
+
+        //expect(await myStorePage.myStoreLogoIsDisplayed()).toBeTruthy()
+        //expect(await myStorePage.getStoreName()).toEqual('EBAC - Shop')
 
     });
 });

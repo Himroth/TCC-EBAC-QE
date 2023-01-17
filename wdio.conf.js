@@ -14,7 +14,6 @@ exports.config = {
         // 'path/to/excluded/files'
     ],
 
-    //maxInstances: 10,
 
     capabilities: [{
         "platformName": "Android",
@@ -24,30 +23,13 @@ exports.config = {
         "app": join(process.cwd(), './mobile/android/loja-ebac.apk'),
 	    "appWaitActivity": "com.woocommerce.android.ui.login.LoginActivity",
 
-        //maxInstances: 5,
-  
-        //browserName: 'chrome',
-        //acceptInsecureCerts: true
 
     }],
 
     waitforTimeout: 20000,
     mochaOpts: {
         timeout: 300000,
-    //logLevel: 'info',
-
-    //bail: 0,
-
-    //baseUrl: 'http://localhost',
-
-    //waitforTimeout: 20000,
-
-    //connectionRetryTimeout: 120000,
-    
-    //connectionRetryCount: 3,
-
-    //services: ['chromedriver','appium'],
-    
+  
 
     framework: 'mocha',
 
