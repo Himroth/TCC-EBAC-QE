@@ -119,8 +119,7 @@ results/
 reports/
 
 #Pasta downloads
-downloads
+downloads/
 
-# Jest report
-
-jest-html-reporters-attach/jest_html_reporters/result.js
+#Jest reports
+jest-html-reporters-attach/
