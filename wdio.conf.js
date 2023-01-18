@@ -16,7 +16,7 @@ exports.config = {
     suites: {
         catalogo: [
             './mobile/specs/acessarCatalogo.e2e.js',
-            './mobile/specs/gerarVariacaoProduto.e2ejs',
+            './mobile/specs/gerarVariacaoProduto.e2e.js',
             './mobile/specs/procurarProduto.e2e.js'
         ]
     },
@@ -40,7 +40,7 @@ exports.config = {
         framework: 'mocha',
 
 
-        maxInstances: 1
+        
         //reporters: ['spec'],
 
 
@@ -48,4 +48,5 @@ exports.config = {
         //  ui: 'bdd',
         //timeout: 300000
     },
+    maxInstances: 1
 }
