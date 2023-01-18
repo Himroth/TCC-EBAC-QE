@@ -1,4 +1,4 @@
-const { join } = require('path')  
+const { join } = require('path')
 
 exports.config = {
 
@@ -28,24 +28,24 @@ exports.config = {
         "deviceName": "Pixel XL API 29",
         "automationName": "UiAutomator2",
         "app": join(process.cwd(), './mobile/android/loja-ebac.apk'),
-	    "appWaitActivity": "com.woocommerce.android.ui.login.LoginActivity",
+        "appWaitActivity": "com.woocommerce.android.ui.login.LoginActivity",
         'newCommandTimeout': 240
     }],
 
     waitforTimeout: 20000,
     mochaOpts: {
         timeout: 300000,
-  
-
-    framework: 'mocha',
-    
-
-    maxInstances: 1
-    //reporters: ['spec'],
 
 
-    //mochaOpts: {
-      //  ui: 'bdd',
+        framework: 'mocha',
+
+
+        maxInstances: 1
+        //reporters: ['spec'],
+
+
+        //mochaOpts: {
+        //  ui: 'bdd',
         //timeout: 300000
     },
 }
