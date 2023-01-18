@@ -7,8 +7,7 @@ let password = 'GD*peToHNJ1#c$sgk08EaYJQ'
 let urlLoja = 'http://lojaebac.ebaconline.art.br/'
 
 describe('Procurar um produto e validar se o produto correto é achado', () => {
-
-    it('Procura um produto e valida se achou', async () => {
+    before( async () => {
         await homePage.goToLogin()
         await loginPage.setStoreAddress(urlLoja)
         await loginPage.continue()
@@ -17,6 +16,9 @@ describe('Procurar um produto e validar se o produto correto é achado', () => {
         await loginPage.continueTwoFactor()
         await loginPage.passwordTwo(password)
         await loginPage.continueAfterTwoFactorPass()
+    });
+
+    it('Procura um produto e valida se achou', async () => {
         await produtoPage.tapButtonProduct()
         await produtoPage.esperaOProcurar()
         await produtoPage.clicaCampoProcurar()

@@ -8,7 +8,7 @@ let urlLoja = 'http://lojaebac.ebaconline.art.br/'
 
 describe('Validar geração de variação de produto sem preço', () => {
 
-    it('Gerar uma nova variação e deixar sem preço para validar a mensagem de preço faltando', async () => {
+    before( async () => {
         await homePage.goToLogin()
         await loginPage.setStoreAddress(urlLoja)
         await loginPage.continue()
@@ -17,7 +17,9 @@ describe('Validar geração de variação de produto sem preço', () => {
         await loginPage.continueTwoFactor()
         await loginPage.passwordTwo(password)
         await loginPage.continueAfterTwoFactorPass()
+    });
 
+    it('Gerar uma nova variação e deixar sem preço para validar a mensagem de preço faltando', async () => {
         await produtoPage.tapButtonProduct()
         await produtoPage.esperaOProcurar()
         await produtoPage.clicaCampoProcurar()

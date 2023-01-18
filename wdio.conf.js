@@ -1,4 +1,5 @@
 const { join } = require('path')
+const allure = require('allure-commandline')
 
 exports.config = {
 
@@ -35,18 +36,44 @@ exports.config = {
     waitforTimeout: 20000,
     mochaOpts: {
         timeout: 300000,
-
-
-        framework: 'mocha',
-
-
-        
-        //reporters: ['spec'],
-
-
-        //mochaOpts: {
-        //  ui: 'bdd',
-        //timeout: 300000
     },
+
+    framework: 'mocha',
+
+    reporters: ['spec', ['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+    }]],
+
+    onComplete: function () {
+        const reportError = new Error('Could not generate Allure report')
+        const generation = allure(['generate', 'allure-results', '--clean'])
+        return new Promise((resolve, reject) => {
+            const generationTimeout = setTimeout(
+                () => reject(reportError),
+                5000)
+
+            generation.on('exit', function (exitCode) {
+                clearTimeout(generationTimeout)
+
+                if (exitCode !== 0) {
+                    return reject(reportError)
+                }
+
+                console.log('Allure report successfully generated')
+                resolve()
+            })
+        })
+    },
+
+
+
+
+    //mochaOpts: {
+    //  ui: 'bdd',
+    //timeout: 300000
+
+
     maxInstances: 1
 }

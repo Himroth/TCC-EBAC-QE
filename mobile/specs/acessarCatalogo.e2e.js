@@ -8,9 +8,7 @@ let urlLoja = 'http://lojaebac.ebaconline.art.br/'
 
 describe('Validar as funcionaliade do catálogo de produtos', () => {
 
-
-
-    it('Validar se o usuário consegue acessar o catálogo de produtos', async () => {
+    before( async () => {
         await homePage.goToLogin()
         await loginPage.setStoreAddress(urlLoja)
         await loginPage.continue()
@@ -19,7 +17,10 @@ describe('Validar as funcionaliade do catálogo de produtos', () => {
         await loginPage.continueTwoFactor()
         await loginPage.passwordTwo(password)
         await loginPage.continueAfterTwoFactorPass()
+    });
 
+
+    it('Validar se o usuário consegue acessar o catálogo de produtos', async () => {
         await produtoPage.tapButtonProduct()
         expect(await produtoPage.namePageProduct()).toBeTruthy()
         expect(await produtoPage.getProductNamePageToolbar()).toEqual('Products')

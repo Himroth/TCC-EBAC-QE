@@ -128,3 +128,6 @@ jest-html-reporters-attach\jest_html_reporters\result.js
 
 #Android App
 mobile/android/loja-ebac.apk
+
+#Allure report
+allure*/
