@@ -1,15 +1,14 @@
 const homePage = require("../pageobjects/home.page")
 const loginPage = require("../pageobjects/login.page");
-const myStorePage = require("../pageobjects/myStore.page");
 const produtoPage = require("../pageobjects/produto.page")
 
 let usuario = 'gerente'
 let password = 'GD*peToHNJ1#c$sgk08EaYJQ'
 let urlLoja = 'http://lojaebac.ebaconline.art.br/'
 
-describe('Acessar o painel de adminstração da loja EBAC', () => {
+describe('Procurar um produto e validar se o produto correto é achado', () => {
 
-    it('Fazer login no painel de adminstração com credenciais válidas', async () => {
+    it('Procura um produto e valida se achou', async () => {
         await homePage.goToLogin()
         await loginPage.setStoreAddress(urlLoja)
         await loginPage.continue()
@@ -18,13 +17,14 @@ describe('Acessar o painel de adminstração da loja EBAC', () => {
         await loginPage.continueTwoFactor()
         await loginPage.passwordTwo(password)
         await loginPage.continueAfterTwoFactorPass()
-
         await produtoPage.tapButtonProduct()
-        expect(await produtoPage.namePageProduct()).toBeTruthy()
-        expect(await produtoPage.getProductNamePageToolbar()).toEqual('Products')
-
-        //expect(await myStorePage.myStoreLogoIsDisplayed()).toBeTruthy()
-        //expect(await myStorePage.getStoreName()).toEqual('EBAC - Shop')
-
+        await produtoPage.esperaOProcurar()
+        await produtoPage.clicaCampoProcurar()
+        await produtoPage.esperaCampoInsereTexto()
+        await produtoPage.preencheCampoInsereTexto()
+        await produtoPage.waitCampoSorte()
+        await produtoPage.waitProdutoNome()
+        expect(await produtoPage.waitProdutoNome()).toBeTruthy()
+        expect(await produtoPage.waitProdutoNome()).toEqual('Abominable Hoodie')
     });
 });

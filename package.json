@@ -8,7 +8,7 @@
     "cy:run": "npx cypress run",
     "testAPI": "jest",
     "wdio": "wdio run ./wdio.conf.js",
-    "test": "npx wdio run ./wdio.conf.js"
+    "test": "npx wdio run ./wdio.conf.js --suite catalogo"
   },
   "repository": {
     "type": "git",
