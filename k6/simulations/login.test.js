@@ -1,9 +1,10 @@
 import { group } from 'k6';
-import postCupom from "../requests/postCupom.request"
-import criaCupom from "../data/criaCupom.json"
+import Login from '../requests/login.request'
+import data from '../data/usuarios.json'
 
 
-export const options = {
+
+ export const options = {
     stages: [
         { duration: '15s', target: 10 },
         { duration: '10s', target: 50 },
@@ -16,10 +17,13 @@ export const options = {
 } 
 
 export default function () {
+    
+    let login = new Login()
+   
 
-    let cupom = new postCupom()
+    group('login and get token', () => {
+        login.access(data.user.user, data.user.pass)          //Chamando metodo access e passar user e pass
 
-    group('criar cupom', () => {
-        cupom.postCupom(criaCupom.code, criaCupom.amount, criaCupom.discount_type, criaCupom.description)
     })
+
 }

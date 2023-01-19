@@ -11,7 +11,7 @@
     "test": "npx wdio run ./wdio.conf.js --suite catalogo",
     "report": "npx allure open allure-report",
     "k6build": "webpack",
-    "k6": "k6 run dist/postCupom.test.js"
+    "k6": "k6 run"
   },
   "repository": {
     "type": "git",

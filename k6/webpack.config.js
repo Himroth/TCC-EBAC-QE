@@ -2,9 +2,9 @@ const path = require('path');
 require ('dotenv').config()
 
 module.exports = {
-  mode: process.env.NODE_ENV,
+  mode: 'development',
   entry: {
-    postCupom: 'performance\k6\tests\simulations\postCupom.test.js',
+    login: 'k6\simulations\login.test.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
