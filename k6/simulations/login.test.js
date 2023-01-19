@@ -22,7 +22,7 @@ export default function () {
    
 
     group('login and get token', () => {
-        login.access(data.user.user, data.user.pass)          //Chamando metodo access e passar user e pass
+        login.access(data.user.user, data.user.pass)
 
     })
 
