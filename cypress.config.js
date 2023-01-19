@@ -8,6 +8,7 @@ module.exports = defineConfig({
     viewportHeight: 1000,
     viewportWidth: 1500,
     specPattern: 'cypress/**/*.cy.{js,jsx,ts,tsx}',
+    video: false,
     setupNodeEvents(on, config) {
       on('before:run', async (details) => {
         console.log('override before:run');
