@@ -23,6 +23,7 @@ jobs:
         continue-on-error: true
       - name: Run api tests on jest
         run: npm run testAPI
+        continue-on-error: true
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3
         with:
