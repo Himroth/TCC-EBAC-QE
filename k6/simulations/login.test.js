@@ -1,6 +1,6 @@
 import { group } from 'k6';
-import Login from 'k6/requests/login.request.js'
-import data from 'k6/data/usuarios.json'
+import Login from '../requests/login.request'
+import data from '../data/usuarios.json'
 
 
 
