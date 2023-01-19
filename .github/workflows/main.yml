@@ -21,6 +21,7 @@ jobs:
       - name: Install dependencies
         with:
           install-command: npm install
+        continue-on-error: true
       - name: Run api tests on jest
         run: npm run testAPI
       - name: Publish Report
