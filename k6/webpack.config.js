@@ -4,7 +4,7 @@ require ('dotenv').config()
 module.exports = {
   mode: 'development',
   entry: {
-    login: 'k6\simulations\login.test.js',
+    login: './simulations/login.test.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
