@@ -1,4 +1,3 @@
-const { localConf } = require('./local.conf');
 const { sauceConf } = require('./sauce.config');
 
 require('dotenv').config()
