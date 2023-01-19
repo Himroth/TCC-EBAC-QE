@@ -1,0 +1,34 @@
+name: TCC - CI
+
+on: 
+
+  push:
+    branches: [main]
+    
+  workflow_dispatch:
+
+jobs:
+
+  test:
+  
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+            node-version: 18
+      - name: Install dependencies
+        with:
+          install-command: npm install
+      - name: Run api tests on jest
+        run: npm run testAPI
+      - name: Publish Report
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: jest_html_reporters.html
+          
+          
+      
+      
