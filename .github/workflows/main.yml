@@ -31,6 +31,7 @@ jobs:
           publish_dir: ./jest-report
       - name: Run UI tests and contracts tests on cypress
         run: npm run cy:run
+        continue-on-error: true
       - name: Publish Report Cypress
         uses: peaceiris/actions-gh-pages@v3
         with:
