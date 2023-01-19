@@ -31,6 +31,9 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./cypress/reports/html        
+          publish_dir: ./cypress/reports/html
+      - name: Run mobile tests
+        run: npm run test
+        continue-on-error: true
       
       
