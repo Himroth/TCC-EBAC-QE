@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cy:runReportJunit": "npx cypress run --reporter junit",
-    "cy:run": "npx cypress run",
+    "cy:run": "npx cypress run --browser chrome",
     "testAPI": "jest api",
     "wdio": "wdio run ./wdio.conf.js",
     "test": "npx wdio run ./wdio.conf.js --suite catalogo",
