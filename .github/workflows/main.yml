@@ -19,8 +19,7 @@ jobs:
         with:
             node-version: 18
       - name: Install dependencies
-        with:
-          install-command: npm install
+        run: npm install
         continue-on-error: true
       - name: Run api tests on jest
         run: npm run testAPI
