@@ -6,10 +6,10 @@ import data from '../data/usuarios.json'
 
  export const options = {
     stages: [
-        { duration: '15s', target: 10 },
-        { duration: '10s', target: 50 },
-        { duration: '15s', target: 10 },
-        { duration: '10s', target: 0 },
+        { duration: '90s', target: 10 },
+        { duration: '20s', target: 20 },
+        { duration: '10s', target: 10 },
+
     ],
     thresholds: {
         http_req_duration: ['p(99) < 1000']
