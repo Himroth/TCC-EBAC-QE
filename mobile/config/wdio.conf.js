@@ -1,4 +1,4 @@
-const { sauceConf } = require('./sauce.config');
+const { sauceConf } = require('/repositório/TCC-EBAC-QE/mobile/config');
 
 require('dotenv').config()
 
