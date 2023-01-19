@@ -1,6 +1,8 @@
 {
     "reporters": [
         "default",
-        "jest-html-reporters"
+        ["jest-html-reporters", {
+            "filename": "index.html" 
+        }]
     ]
 }
