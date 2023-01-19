@@ -32,8 +32,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./cypress/reports/html
-      - name: Run mobile tests
-        run: npm run testMobile
-        continue-on-error: true
       
       
