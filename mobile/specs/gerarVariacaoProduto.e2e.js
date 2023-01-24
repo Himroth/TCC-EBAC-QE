@@ -2,8 +2,8 @@ const homePage = require("../pageobjects/home.page")
 const loginPage = require("../pageobjects/login.page");
 const produtoPage = require("../pageobjects/produto.page")
 
-let usuario = 'gerente'
-let password = 'GD*peToHNJ1#c$sgk08EaYJQ'
+let usuario = ''
+let password = ''
 let urlLoja = 'http://lojaebac.ebaconline.art.br/'
 
 describe('Validar geração de variação de produto sem preço', () => {
