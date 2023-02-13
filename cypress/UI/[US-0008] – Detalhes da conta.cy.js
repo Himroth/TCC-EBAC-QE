@@ -1,3 +1,4 @@
+/// <reference types="cypress" />
 const {usuario} = require ('../fixtures')
 var faker = require('faker');
 import { detalhesDaContaPage } from "../support/page_objects";
