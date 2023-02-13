@@ -1,3 +1,4 @@
+/// <reference types="cypress" />
 const {produtoPage, catalogoPage} = require ('../support/page_objects')
 
 describe('Testes do catálogo de produto0s', () => {
