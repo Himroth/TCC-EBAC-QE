@@ -1,3 +1,4 @@
+/// <reference types="cypress" />
 import { loginPage } from "../support/page_objects";
 const {usuario} = require ('../fixtures')
 
