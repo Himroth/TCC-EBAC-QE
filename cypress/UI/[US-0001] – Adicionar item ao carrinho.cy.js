@@ -1,3 +1,4 @@
+/// <reference types="cypress" />
 const {produtoPage} = require ('../support/page_objects')
 const {tamanho, cor, nomeProduto} = require ('../fixtures')
 
