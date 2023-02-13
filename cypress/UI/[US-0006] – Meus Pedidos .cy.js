@@ -1,3 +1,4 @@
+/// <reference types="cypress" />
 import { meusPedidosPage } from "../support/page_objects";
 const {usuario} = require ('../fixtures')
 
